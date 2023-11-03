@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { Box } from "@chakra-ui/react";
+import { Box,Container } from "@chakra-ui/react";
 
 const Main = ({children,router}) => {
     return (
@@ -14,3 +14,5 @@ const Main = ({children,router}) => {
         </Box>
     )
 }
+
+export default Main;
