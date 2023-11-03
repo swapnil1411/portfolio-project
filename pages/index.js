@@ -1,21 +1,26 @@
 import { Box, Container, Heading } from "@chakra-ui/react"
+import Navbar from "../components/navbar"
+import Profile from "../components/profile"
+import { useState,useEffect} from "react"
+
+
 
 const Page = () =>{
-    return (
-        <Container>
-       
-        <Box borderRadius={"lg"} bg={"red"} p={3} mb={6} align="center">Hello , I&apos;m a full-stack developer based in Canada!</Box>
-        <Box display={{md:'flex'}}>
-        <Box flexGrow={1}>
-        <Heading as="h2" variant="page-title">
-        Swapnil Nanavati
-        </Heading>
-        <p>Developer</p>
-        </Box>
-      
-        </Box>
+    const [domLoaded, setDomLoaded] = useState(false);
 
-        </Container>
+    useEffect(() => {
+        setDomLoaded(true);
+      }, []);
+
+    return (
+        <>
+{domLoaded && (
+        <Container maxW="container.xl">
+       <Navbar/>
+<Profile/>
+       </Container>
+       )}
+       </>  
     )
 }
 

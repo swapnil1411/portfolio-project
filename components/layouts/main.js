@@ -8,7 +8,7 @@ const Main = ({children,router}) => {
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <title>Swapnil Nanavati - Homepage</title>
         </Head>
-        <Container maxW="container.md" pt={14}>
+        <Container maxW="container.2xl" >
         {children}
         </Container>
         </Box>
