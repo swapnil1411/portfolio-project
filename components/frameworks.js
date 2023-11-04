@@ -2,6 +2,7 @@ import { Box, Flex, Container, Image, Heading } from "@chakra-ui/react";
 import { useContext } from 'react';
 import MyContext from './context';
 import React, { useState } from 'react'
+import { motion } from "framer-motion"; 
 const languages = [
   { name: "JavaScript", iconUrl: "js.svg" },
   { name: "React", iconUrl: "react.svg" },
@@ -33,12 +34,29 @@ function Framework() {
           </Heading>
           
       <Flex flexWrap="wrap" >
+     
         {languages.map((language, index) => (
+          <motion.div
+          animate={{
+            
+            rotate: [0, 90,, 180, 270, 360],
+            repeatCount:Infinity,
+            borderRadius: ["20%", "20%", "50%", "50%", "20%"],
+          }}
+          transition={{
+            duration: 2,
+            
+            times: [0, 0.2, 0.5, 0.8, 1],
+            repeat: Infinity,
+            repeatDelay: 1
+          }}
+
+          >
           <Box
             key={language.name}
-            m={2}
+            m={4}
             p={4}
-            borderRadius={9}
+            borderRadius={50}
             backgroundColor="gray.500"
             display="flex"
             flexDirection="column"
@@ -47,6 +65,7 @@ function Framework() {
             <Image src={language.iconUrl} alt={language.name} boxSize="150px" />
             <span>{language.name}</span>
           </Box>
+          </motion.div>
         ))}
       </Flex>
       </Container>
