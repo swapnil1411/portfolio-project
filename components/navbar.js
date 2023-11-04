@@ -1,15 +1,22 @@
 import { Box, Container, Flex, Spacer, Switch, Text } from '@chakra-ui/react'
 import React, { useState } from 'react'
 
+import { useContext } from 'react';
+import MyContext from './context';
+
+
+
 function Navbar() {
-  const [isDarkMode, setIsDarkMode] = useState(false)
+  
+  const [isDarkMode, setIsDarkMode] = useContext(MyContext);
+
 
   const toggleDarkMode = () => {
     setIsDarkMode(!isDarkMode)
   }
 
   return (
-    <Box bg={isDarkMode ? 'gray.800' : 'gray.100'} py="2" px="3" rounded={6}>
+    <Box bg={isDarkMode ? 'gray.800' : 'gray.200'} py="2" px="3" rounded={6}>
       <Container maxW={'100%'} margin={0} >
         <Flex alignItems="center" justifyContent='center'minH={20} >
           <Text
