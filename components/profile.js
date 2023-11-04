@@ -1,19 +1,34 @@
-import { Box, Container, Heading } from "@chakra-ui/react"
- 
+import { Box, Button, Container, Flex, Heading,Image } from "@chakra-ui/react"
+
  const Profile = () =>{
     return (
-        <Container>
-        <Box borderRadius={"lg"} bg={"red"} p={3} mb={6} align="center">Hello , I&apos;m a full-stack developer based in Canada!</Box>
-        <Box display={{md:'flex'}}>
-        <Box flexGrow={1}>
-        <Heading as="h2" variant="page-title">
-        Swapnil Nanavati
+        <Container  maxW={'30vw'}  m={0}>
+            <Flex alignItems="center" justifyContent='center'  >
+      <Box>
+      <Flex direction="column" alignItems="center" justifyContent='center'>
+        <Heading as="h1" fontSize="8xl" textAlign="center">
+          Web 
+         <br /> Developer
         </Heading>
-        <p>Developer</p>
-        </Box>
-      
+        <Heading as="h2" fontSize="xl" alignSelf={'flex-start'}>
+         ------ Hi, I'm Swapnil Nanavati
+        </Heading>
+        <Heading as="h2" fontSize="md" textAlign="center">
+        a web developer based in India
+        </Heading>
+       
+        <Button mt={4} borderRadius={10} colorScheme="blue">
+          Talk to me
+        </Button>
+        
+      </Flex>
+        
         </Box>
 
+      {/* <Box>
+      <Image src="profile.jpg" alt='Swapnil Nanavati' />
+        </Box> */}
+</Flex>
         </Container>
     )
 }

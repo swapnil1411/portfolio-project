@@ -11,11 +11,12 @@ const Page = () =>{
     useEffect(() => {
         setDomLoaded(true);
       }, []);
+      
 
     return (
         <>
 {domLoaded && (
-        <Container maxW="container.xl">
+        <Container maxW="90%" minH='100%'>
        <Navbar/>
 <Profile/>
        </Container>

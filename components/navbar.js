@@ -9,9 +9,9 @@ function Navbar() {
   }
 
   return (
-    <Box bg={isDarkMode ? 'gray.800' : 'gray.100'} py="2" px="4" rounded={6}>
-      <Container>
-        <Flex alignItems="center">
+    <Box bg={isDarkMode ? 'gray.800' : 'gray.100'} py="2" px="3" rounded={6}>
+      <Container maxW={'100%'} margin={0} >
+        <Flex alignItems="center" justifyContent='center'minH={20} >
           <Text
             fontSize="2xl"
             fontWeight="bold"
