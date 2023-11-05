@@ -23,12 +23,13 @@ const ProjectCard = ({ name, url, src }) => {
       <Box
         borderWidth="1px"
         borderRadius="lg"
+      
         p={4}
         overflow="hidden"
         color={isDarkMode ? '' : 'gray.200'}
       >
         <Flex flexDirection={'column'}>
-          <Container flex={1} maxH={'calc(30vh)'}>
+          <Container flex={1} >
             <Image src={src} alt={src} borderRadius={7}></Image>
           </Container>
 

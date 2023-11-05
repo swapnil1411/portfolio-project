@@ -29,27 +29,16 @@ function Framework() {
     rounded={6}
   >
 
-  <Heading as="h2" fontSize="4xl"  textAlign={'center'} >
+  <Heading as="h2" fontSize="6xl" padding={4}  textAlign={'center'} >
            Skills
           </Heading>
           
-      <Flex flexWrap="wrap" >
+      <Flex flexWrap="wrap" alignItems={'center'} justifyContent={'center'}>
      
         {languages.map((language, index) => (
           <motion.div
-          animate={{
-            
-            rotate: [0, 90,, 180, 270, 360],
-            repeatCount:Infinity,
-            borderRadius: ["20%", "20%", "50%", "50%", "20%"],
-          }}
-          transition={{
-            duration: 2,
-            
-            times: [0, 0.2, 0.5, 0.8, 1],
-            repeat: Infinity,
-            repeatDelay: 1
-          }}
+        
+        
 
           >
           <Box
@@ -57,7 +46,7 @@ function Framework() {
             m={4}
             p={4}
             borderRadius={50}
-            backgroundColor="gray.500"
+            backgroundColor="gray.300"
             display="flex"
             flexDirection="column"
             alignItems="center"
